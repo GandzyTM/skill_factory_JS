@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>List all array items, with keys and values:</p>
+
+    <p id="demo"></p>
+    <p id="const"></p>
+
+    <script>
+        var fruits = ["apple", "orange", "cherry"];
+        fruits.forEach(myFunction);
+
+        function myFunction(item, index) {
+            document.getElementById("demo").innerHTML += index + ":" + item + "<br>";
+        }
+
+        const celsius = [-15, -5, 0, 10, 16, 20, 24, 32];
+
+        const rate = value => value * 1.8 + 32;
+
+        const fahrenheit = celsius.entries(t => rate(t));
+        document.getElementById("const").innerHTML += fahrenheit;
+    </script>
+
+</body>
+
+</html>
