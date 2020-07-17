@@ -80,13 +80,13 @@ minus_alt_sec.addEventListener('click', () => {
 });
 
 start.addEventListener('click', () => {
-    reset.disabled = true;
-    start.disabled = true;
     total = countSec + countMin * 60;
     console.log('countMin', countMin);
     console.log('nIntervId', nIntervId)
     console.log('total = ', total);
     if (!nIntervId && total > 0) {
+        reset.disabled = true;
+        start.disabled = true;
         nIntervId = setInterval(() => {
             console.log('total = ', total);
             if (total > 0) {
