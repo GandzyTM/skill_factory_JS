@@ -1,6 +1,6 @@
 const timer = document.querySelector('.countdown');
-const minutes = document.querySelector('.j-countdown__minutes');
-const seconds = document.querySelector('.j-countdown__seconds');
+const minutesNode = document.querySelector('.j-countdown__minutes');
+const secondsNode = document.querySelector('.j-countdown__seconds');
 const message = document.querySelector('.message');
 
 const plus = document.querySelector('.j-btn__plus');
@@ -18,5 +18,10 @@ const numberConverter = (value) => {
 }
 
 const setCountdownTime = () => {
-	const minutes = Math.floor(time )
+	const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+	const seconds = Math.floor((time % (1000 * 60)) / (1000));
+
+	minutesNode.innerHTML = numberConverter(minutes);
+	secondsNode.innerHTML = numberConverter(seconds);
 }
+

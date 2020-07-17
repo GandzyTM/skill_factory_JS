@@ -12,24 +12,29 @@
     <h1 class="countdown-title">Countdown Clock</h1>
     <section class="countdown">
         <div class="countdown-number">
+            <span class="j-btn__minus_min">-</span>
             <p class="minutes countdown-time"></p>
+            <span class="j-btn__plus_min">+</span>
             <p class="countdown-text">Minutes</p>
         </div>
         <div class="countdown-number">
+            <span class="j-btn__minus_sec">-</span>
             <p class="seconds countdown-time"></p>
+            <span class="j-btn__plus_sec">+</span>
             <p class="countdown-text">Seconds</p>
         </div>
     </section>
 
     <div>
-        <button class="plus">plus</button>
-        <button class="minus">minus</button>
-        <button class="start">start</button>
+        <button class="j-btn__start">start</button>
+        <button class="j-btn__pause">pause</button>
+        <input class="j-btn__reset" type="reset" value="reset">
     </div>
 
     <div class="message">
 
     </div>
+    <script src="js/countdowntimer.js"></script>
 </body>
 
 </html>
