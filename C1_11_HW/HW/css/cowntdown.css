@@ -59,3 +59,13 @@ button, input{
   border: 2px solid rgb(65, 44, 132);
   background-color: white;
 }
+
+button, input:hover {
+  background: white;
+}
+
+button, input:disabled {
+  background: #c7c7c7;
+  color: #969494;
+  cursor: inherit;
+}

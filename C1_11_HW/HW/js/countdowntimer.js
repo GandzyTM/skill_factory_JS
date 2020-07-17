@@ -80,6 +80,8 @@ minus_alt_sec.addEventListener('click', () => {
 });
 
 start.addEventListener('click', () => {
+    reset.disabled = true;
+    start.disabled = true;
     total = countSec + countMin * 60;
     console.log('countMin', countMin);
     console.log('nIntervId', nIntervId)
@@ -118,6 +120,8 @@ reset.addEventListener('click', () => {
 });
 
 pause.addEventListener('click', () => {
+    reset.disabled = false;
+    start.disabled = false;
     pauseTimer();
 });
 
